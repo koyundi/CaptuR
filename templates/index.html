@@ -1,0 +1,80 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Page title</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="{% static "css/bootstrap/bootstrap.min.css" %}">
+    <link rel="icon" type="image/png" sizes="32x32" href="shuffle-for-bootstrap.png">
+</head>
+<body>
+    <div class="container-fluid">
+      <nav class="navbar navbar-expand-lg navbar-light">
+        <a class="navbar-brand col-4 pl-0 mr-0" href="{% url "landing page" %}">CaptuR</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigations-09">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-md-center col-8 px-0" id="navigations-09">
+          <ul class="navbar-nav col-6 justify-content-center">
+            <li class="nav-item">
+              {% comment %} <a class="nav-link active" href="#">
+                Features
+                <span class="sr-only">(current)</span>
+              </a> {% endcomment %}
+            </li>
+            <li class="nav-item">
+            </li><li class="nav-item">
+            </li><li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">Demo</a>
+              <div class="dropdown-menu">
+                <a class="dropdown-item" href="{% url "words" %}">Text</a>
+                    <a class="dropdown-item" href="{% url "pics" %}">Image</a>
+                    <a class="dropdown-item" href="{% url "audio" %}">Audio</a>
+              </div>
+            </li>
+          </ul>
+          <div class="col-6 text-lg-right px-0"><a class="btn btn-outline-primary mt-2 mt-lg-0 mr-0" href="#">Join Wait List</a></div>
+        </div>
+      </nav>
+                        
+      <section data-from-ai="true" class="jumbotron">  <div class="container text-center">    <h1 class="display-4">CaptuR</h1>    <p class="lead text-muted">Empowering Trust with Real-Time Deepfake Detection: Safeguard Your Media, Finance, and Government Systems with AI-Driven Accuracy</p>    <button class="btn btn-primary mt-3">Try Demo</button>  </div></section>
+                        
+      <section class="py-5">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6 my-auto">
+              <h2 class="mb-3">CaptuR's Mission</h2>
+              <p class="mb-4">Our mission at captuR is to protect the integrity of digital media by delivering cutting-edge, real-time deepfake detection solutions. We empower organizations in finance, government, and media to combat disinformation, fraud, and manipulation, fostering trust and transparency in an increasingly AI-driven world.</p>
+              <a href="#">Watch more</a>
+            </div>
+            <div class="col-md-6 mt-5 mt-md-0">
+              <img class="img-fluid" src="https://images.unsplash.com/photo-1618005198919-d3d4b5a92ead?crop=entropy&amp;cs=srgb&amp;fm=jpg&amp;ixid=M3wzMzIzMzB8MHwxfHNlYXJjaHw5fHxBYnN0cmFjdCUyMFRlY2hub2xvZ3l8ZW58MHx8fHwxNzI4Njc5MDk0fDA&amp;ixlib=rb-4.0.3&amp;q=85&amp;w=1920" alt="">
+            </div>
+          </div>
+        </div>
+      </section>
+                        
+      <section class="py-5 jumbotron">
+        <div class="container text-center">
+          
+          <h1 class="display-4 my-3">We are building a safe internet where information trustwathy</h1>
+          
+        </div>
+      </section>
+                        
+      <section class="py-5">
+        <div class="container text-center">
+          <h3 class="mb-4">Protect What Matters with Unmatched Deepfake Detection</h3>
+          <p class="lead">Join the fight against digital deception. Safeguard your organization with captuR's AI-powered deepfake detection technology. Experience real-time protection and stay ahead of evolving threats. Get started today!</p>
+          <a class="btn btn-primary mt-2" href="#">Join the Revolution!</a>
+        </div>
+      </section>
+                        
+      <footer class="py-4">  <div class="container text-center text-lg-left">    <div class="row d-flex justify-content-between flex-column flex-lg-row align-items-center align-items-lg-start">      <div class="d-flex flex-column col-10 col-lg-5 pl-0">        <h5><a href="#">CaptuR</a></h5>        <p>Let's get you connected! We've designed a simple, efficient process for companies migrating to PiperNet. Here's how it works.</p>        <ul class="list-inline d-flex mb-3 justify-content-center justify-content-lg-start">          <li class="px-2">            <a href="#">              <img src="placeholder/icons/twitter.svg" alt="">            </a>          </li>          <li class="px-2">            <a href="#">              <img src="placeholder/icons/facebook-official.svg" alt="">            </a>          </li>          <li class="px-2">            <a href="#">              <img src="placeholder/icons/instagram.svg" alt="">            </a>          </li>        </ul>      </div>      <div>        <h6>Contact</h6>        <ul class="list-inline ml-0">          <li class="py-1"><a href="">koyundi@pdfaind.africa</a></li>          <li class="py-1"><a href="#">+254 720882406</a></li>          <li class="py-1"><a href="#">CaptuR HQ-Nairobi.</a></li>        </ul>      </div>      <div class="w-100 border-top my-3"></div>    </div>    <div class="flex-column flex-sm-row align-items-center justify-content-sm-between">      <a href="#">Terms and conditions</a>      <p class="mb-0 small text-muted">© 2024 CapturR. All rights reserved.</p>    </div>  </div></footer>
+            </div>
+    <script src="{% static "js/jquery/jquery.min.js" %}"></script>
+    <script src="{% static "js/popper/popper.min.js" %}"></script>
+    <script src="{% static "js/bootstrap/bootstrap.min.js" %}"></script>
+</body>
+</html>

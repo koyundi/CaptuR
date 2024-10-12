@@ -1,0 +1,9 @@
+django
+django-cors-headers
+whitenoise
+
+#AI packages
+transformers
+scipy
+torch
+pillow

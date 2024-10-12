@@ -1,0 +1,69 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Image Demo</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="{% static "css/bootstrap/bootstrap.min.css"%}">
+    <link rel="icon" type="image/png" sizes="32x32" href="shuffle-for-bootstrap.png">
+</head>
+<body>
+    <div class="container-fluid">
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <a class="navbar-brand col-4 pl-0 mr-0" href="{% url "landing page" %}">CaptuR</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigations-09">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-md-center col-8 px-0" id="navigations-09">
+              <ul class="navbar-nav col-6 justify-content-center">
+                <li class="nav-item">
+                  {% comment %} <a class="nav-link active" href="#">
+                    Features
+                    <span class="sr-only">(current)</span>
+                  </a> {% endcomment %}
+                </li>
+                <li class="nav-item">
+                </li><li class="nav-item">
+                </li><li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">Demo</a>
+                  <div class="dropdown-menu">
+                    <a class="dropdown-item" href="{% url "words" %}">Text</a>
+                    <a class="dropdown-item" href="{% url "pics" %}">Image</a>
+                    <a class="dropdown-item" href="{% url "audio" %}">Audio</a>
+                  </div>
+                </li>
+              </ul>
+              <div class="col-6 text-lg-right px-0"><a class="btn btn-outline-primary mt-2 mt-lg-0 mr-0" href="#">Join Wait List</a></div>
+            </div>
+          </nav>
+                        
+    <section data-from-ai="true" class="py-5"> 
+        <h2 class="mb-5 text-center">Try CaptuR on image</h2>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 mb-3 mb-md-0">
+                    <img class="img-fluid" src="https://images.unsplash.com/photo-1500630417200-63156e226754?crop=entropy&amp;cs=srgb&amp;fm=jpg&amp;ixid=M3wzMzIzMzB8MHwxfHNlYXJjaHw3fHxwaWN0dXJlc3xlbnwwfHx8fDE3Mjg3MjAwMzl8MA&amp;ixlib=rb-4.0.3&amp;q=85&amp;w=1920" alt="">      
+                </div>
+                <div class="col-md-6">
+                    <form method = "post" action={% url "pics" %} enctype="multipart/form-data">
+                        {% csrf_token %}        
+                        <div class="mb-3">
+                            <label for="formFile" class="form-label">Upload an image</label>
+                            <input required name = "image" class="form-control" type="file" id="formFile" accept="image/*">
+                        </div>          
+                        <button class="btn btn-primary btn-block" type="submit">Submit</button>        
+                    </form>      
+                </div>    
+            </div>  
+        </div>
+        {% if prediction %}
+            <h2 class="py-5 mb-5 text-center">Prediction: {{prediction}}</h2>
+        {% endif %}
+    </section>
+    </div>
+    <script src="{% static "js/jquery/jquery.min.js" %}"></script>
+    <script src="{% static "js/popper/popper.min.js" %}"></script>
+    <script src="{% static "js/bootstrap/bootstrap.min.js" %}"></script>
+</body>
+</html>
